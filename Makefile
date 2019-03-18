@@ -5,6 +5,7 @@ installatom: ## Install atom and atom packages
 	sudo apt update
 	sudo apt install atom -y
 	apm install minimap atom-beautify file-icons language-terraform python-isort python-yapf atom-python-virtualenv
+	ln -sfn config.cson ~/.atom/config.cson
 
 .PHONY: installtmux
 installtmux: ## Install tmux
