@@ -10,7 +10,7 @@ all: installgit installtmux installzsh installneovim pythonenvs dotfiles install
 ##########################
 
 .PHONY: installgit ## Install git
-installgit: 
+installgit:
 	sudo apt install git -y
 
 .PHONY: installtmux
@@ -21,6 +21,7 @@ installtmux: ## Install tmux
 installzsh: ## Install zsh and oh-my-zsh
 	sudo apt install zsh -y
 	sh -c "$$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+	chsh -s /usr/bin/zsh
 
 .PHONY: installneovim
 installneovim: ## Install neovim
