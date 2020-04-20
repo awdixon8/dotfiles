@@ -93,8 +93,17 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias pyenv2="source ~/environments/pyenv2/bin/activate"
-alias pyenv3="source ~/environments/pyenv3/bin/activate"
-alias c7nenv="source ~/environments/custodian/bin/activate"
+#alias pyenv2="source ~/environments/pyenv2/bin/activate"
+#alias pyenv3="source ~/environments/pyenv3/bin/activate"
+#alias c7nenv="source ~/environments/custodian/bin/activate"
+
+for env in ~/environments/*; do
+	envName=$(basename "$env")
+	alias $envName="source $env/bin/activate"
+done
 
 bindkey '^H' backward-kill-word
+
+[ -z "$TMUX" ] && { tmux attach || exec tmux new-session && exit;}
+
+export PATH=$PATH:~/tools:~/.local/bin/
