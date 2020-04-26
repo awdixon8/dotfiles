@@ -19,7 +19,7 @@ installtmux: ## Install tmux
 
 .PHONY: installzsh
 installzsh: ## Install zsh and oh-my-zsh
-	sudo apt install zsh -y
+	sudo apt install zsh curl -y
 	sh -c "$$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 	chsh -s /usr/bin/zsh
 
