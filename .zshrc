@@ -96,6 +96,7 @@ source $ZSH/oh-my-zsh.sh
 #alias pyenv2="source ~/environments/pyenv2/bin/activate"
 #alias pyenv3="source ~/environments/pyenv3/bin/activate"
 #alias c7nenv="source ~/environments/custodian/bin/activate"
+alias buffalo="buffaloenv && cd ~/code/buffalo-plaid"
 
 for env in ~/environments/*; do
 	envName=$(basename "$env")
