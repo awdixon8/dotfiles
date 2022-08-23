@@ -1,0 +1,8 @@
+clear lock
+clear control
+! Change right control key to Caps_Lock funtionality
+keycode 105 = Caps_Lock
+! Change Caps Lock key to Control_R functionality
+keycode 66 = Control_R
+add control = Control_R Control_L
+add lock = Caps_Lock
