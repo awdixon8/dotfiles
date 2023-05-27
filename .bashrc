@@ -116,4 +116,4 @@ if ! shopt -oq posix; then
   fi
 fi
 
-#[ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
+[ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
